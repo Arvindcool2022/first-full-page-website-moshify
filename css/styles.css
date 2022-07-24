@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
 /*root variables*/
 
 :root{
@@ -168,3 +174,60 @@ font-size: 1.6rem;
   align-items: center;
   box-shadow: 2px 2px 6px 0px rgba(31,31,31,0.25);
  }
+
+ /* Buttons */
+
+ .btn{
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+ }
+
+ .btn--primary{
+  background-color: var(--color-primary);
+  color: #fff;
+ }
+ .btn--primary:hover{
+  color: #1b1b1b;
+ }
+ .btn--secondary{
+  background-color: var(--color-secondary);
+  color: #fff;
+ }
+ .btn--secondary:hover{
+  color: #1b1b1b;
+ }
+ .btn--accent{
+  background-color: var(--color-accent);
+  color: #fff;
+ }
+ .btn--accent:hover{
+  color: #1b1b1b;
+ }
+ .btn--outline{
+  border: 2px solid var(--color-heading);
+  color: var(--color-heading);
+ }
+ .btn--outline:hover{
+  background-color: var(--color-heading);
+  color: #fff;
+ }
+ .btn--block{
+  display: inline-block;
+  width: 100%;
+ }
+
+ @media screen and (min-width:1024px){
+  .btn{
+    font-size: 1.5rem;
+  }
+ }
+
+ /* Input Component */
