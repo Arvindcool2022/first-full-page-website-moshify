@@ -231,3 +231,23 @@ font-size: 1.6rem;
  }
 
  /* Input Component */
+
+ .input{
+  border-radius: 30px;
+  outline: 0;
+  padding:1.5rem 3.5rem;
+  border: 1px solid #ccc;
+  color: var(--color-heading);
+  text-transform: lowercase;
+ }
+
+ ::placeholder{
+  font-size: 2rem;
+  color: #cbcdd7;
+ }
+
+ @media screen and (min-width:1024px){
+  .input{
+    font-size: 1.5rem;
+  }
+ }
