@@ -145,3 +145,26 @@ font-size: 1.6rem;
     padding-left: 0;
   }
  }
+
+ /* Icons */
+
+ .icon{
+  width: 40px;
+  height: 40px;
+ }
+
+ .icon--primary{
+  fill: var(--color-primary);
+ }
+
+ .icon-container{
+  background-color: #f3f9f8;
+  width: 64px;
+  height: 64px;
+  /* margin: 20px; */
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 6px 0px rgba(31,31,31,0.25);
+ }
