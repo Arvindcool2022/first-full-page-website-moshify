@@ -6,7 +6,7 @@
 
 /*root variables*/
 
-:root{
+:root{ 
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
@@ -363,6 +363,21 @@ padding: 0.5rem 1.5rem;
   }
  }
 
+ /* Media objects */
+
+ .media{
+  display: flex;
+ }
+ .media__body{
+  margin: 0 2rem;
+ }
+ .media__image{
+  margin-top: 1rem;
+ }
+ .media__title{
+  margin-top: 0;
+ }
+ 
 
 
 
