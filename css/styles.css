@@ -162,20 +162,17 @@ padding: 0.5rem 1.5rem;
   width: 40px;
   height: 40px;
  }
+ .icon--small{
+  width: 30px;
+  height: 30px;
+ }
 
  .icon--primary{
   fill: var(--color-primary);
  }
- .icon--accent{
-  width: 2rem;
-  height: 2rem;
-  fill: #fff;
-  margin-right: 5px;
+ .icon--white{
+  fill:#fff;
  }
- .icon--accent:hover{
-  fill: #1b1b1b;
- }
-
 
  .icon-container{
   background-color: #f3f9f8;
@@ -187,6 +184,9 @@ padding: 0.5rem 1.5rem;
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 6px 0px rgba(31,31,31,0.25);
+ }
+ .icon-container--accent{
+  background-color: var(--color-accent);
  }
 
  /* Buttons */
@@ -218,13 +218,25 @@ padding: 0.5rem 1.5rem;
  .btn--secondary:hover{
   color: #1b1b1b;
  }
+ /* for the input component search button 
+ Starts here*/
  .btn--accent{
   background-color: var(--color-accent);
   color: #fff;
  }
- .btn--accent:hover{
-  color: #1b1b1b;
+ .btn > .icon--btn-accent{
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+  margin-right: 5px;
  }
+ .btn--accent:hover,
+ .btn > .icon--btn-accent:hover{
+  color: #1b1b1b;
+  fill: #1b1b1b;
+ }
+ /* Ends here (the input component search button)*/
+
  .btn--outline{
   background-color: #fff;
   border: 2px solid var(--color-heading);
@@ -436,13 +448,39 @@ padding: 0.5rem 1.5rem;
   }
 }
 
-@media screen and (min-width:1024px) {
+/* @media screen and (min-width:1024px) {
   .grid--col-3{
     grid-template-columns: repeat(3, 1fr);
   }
+} */
+
+/* Testimonials */
+
+.testimonial{
+  padding: 3rem;
 }
+.testimonial__image{
+  position: relative;
+}
+.testimonial__image > img{
+  width: 100%;
+}
+.testimonial__image > .icon-container{
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+/* media queries (min-width:1024px) from .quote section breaks here */
 
-
+@media screen and (min-width:768px){
+  .testimonial .quote,
+  .testimonial .quote__author{
+    font-size: 2.4rem;
+  }
+  .testimonial .quote{
+    margin-left: 6rem;
+  }
+}
 
 
 
