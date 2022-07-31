@@ -31,6 +31,7 @@ Body{
 h1,h2,h3{
   color: var(--color-heading);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1{
@@ -77,12 +78,12 @@ a.link-arrow{
 
 .link-arrow::after{
   content: '-->';
-  margin-left: 5px;
-  transition: margin 0.15s;
+  margin-left: 3px;
+  transition: margin 150ms ease-in-out;
 }
 
 .link-arrow:hover::after{
-margin-left: 10px;
+margin-left: 8px;
 }
 
 @media screen and (min-width:1024px)
@@ -203,19 +204,26 @@ padding: 0.5rem 1.5rem;
   white-space: nowrap;
  }
 
+ .btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
  .btn--primary{
-  background-color: var(--color-primary);
-  color: #fff;
+    background-color: var(--color-primary);
+    color: #fff;
  }
  .btn--primary:hover{
-  color: #1b1b1b;
+    background: #3a8ffd;
  }
  .btn--secondary{
-  background-color: var(--color-secondary);
-  color: #fff;
+    background-color: var(--color-secondary);
+    color: #fff;
  }
  .btn--secondary:hover{
-  color: #1b1b1b;
+  background: #05cdf0;
  }
  /* for the input component search button 
  Starts here*/
@@ -223,18 +231,10 @@ padding: 0.5rem 1.5rem;
   background-color: var(--color-accent);
   color: #fff;
  }
- .btn > .icon--btn-accent{
-  width: 2rem;
-  height: 2rem;
-  fill: #fff;
-  margin-right: 5px;
+
+ .btn--accent:hover{
+  background: #ec3000;
  }
- .btn--accent:hover,
- .btn > .icon--btn-accent:hover{
-  color: #1b1b1b;
-  fill: #1b1b1b;
- }
- /* Ends here (the input component search button)*/
 
  .btn--outline{
   background-color: #fff;
@@ -555,7 +555,6 @@ padding: 0.5rem 1.5rem;
 .block{
   --block-padding-vertical: 6rem;
   padding:var(--block-padding-vertical) 2rem;
-  margin: 5px;
 }
 
 .block__header{
@@ -613,16 +612,17 @@ padding: 0.5rem 1.5rem;
 
 .nav__item > a{
   color: #d2d0db;
-  transform: scale(0.5); 
-  /* scale doesn't work */
-  transition: color 400ms;
+   /* You should use display: inline-block for <a> tag (or display: block), because <a> has display: inline by default, but transformable element can't be with display: inline: */
+  display: inline-block;
+  transform-origin: left; 
+  transform: scale(0.98);
+  transition: color 400ms,transform 150ms ease-out;
 }
 
 .nav__item > a:hover{
   color: #fff;
   transform: scale(1);
-  /* scale doesn't work */
-}
+  }
 
 .nav__toggler{
   opacity: 0.5;
@@ -640,21 +640,46 @@ padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width:768px){
-.nav__toggler{
-  display: none;
+  .nav__toggler{
+   display: none;
+  }
+
+  .nav__lists{
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item{
+    border: 0;
+  }
 }
 
-.nav__lists{
-  width: auto;
-  display: flex;
-  font-size: 1.6rem;
-  max-height: 100%;
-  opacity: 1;
+/* Hero */
+.hero{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-.nav__item{
-  border: 0;
-}
+.hero__image{
+  width: 100%;
 }
 
+.hero__tagline{
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+@media screen and (min-width:1024px) {
+  .hero{
+    padding-top:0 ;
+  }
+  .hero__content{
+    text-align: left;
+    align-self: center;
+  }  
+}
 
