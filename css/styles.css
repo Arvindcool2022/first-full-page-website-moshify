@@ -314,12 +314,16 @@ padding: 0.5rem 1.5rem;
   padding:2rem 3rem;
  }
 
- .card--primary .card__header{
+ .card--primary.card__header{
   background-color: var(--color-primary);
   color: #fff;
  }
+ 
+ .card--primary .badge--primary{
+  background-color: #126de4;
+ }
 
- .card--secondary .card__header{
+ .card--secondary.card__header{
   background-color: var(--color-secondary);
   color: #fff;
  }
@@ -328,7 +332,9 @@ padding: 0.5rem 1.5rem;
  }
 
  /* Plans */
-
+ .plan{
+  transition: transform 200ms ease-out;
+ }
  .plan__name{
   color: #fff;
   font-size: 2.4rem;
@@ -353,6 +359,10 @@ padding: 0.5rem 1.5rem;
  .plan .list__item{
   margin-bottom: 2rem;
  }
+ 
+ .plan--popular{
+  transform: scale(1.1);
+ }
  .plan--popular .card__header {
   position: relative;
 }
@@ -364,6 +374,14 @@ padding: 0.5rem 1.5rem;
   position: absolute;
   top: -6px;
   right: 5%;
+}
+
+.plan:hover{
+  transform: scale(1.05);
+}
+
+.plan--popular:hover{
+  transform: scale(1.15);
 }
 
  @media screen and (min-width:1024px){
@@ -453,11 +471,11 @@ padding: 0.5rem 1.5rem;
   }
 }
 
-/* @media screen and (min-width:1024px) {
+@media screen and (min-width:1024px) {
   .grid--col-3{
     grid-template-columns: repeat(3, 1fr);
   }
-} */
+}
 
 /* Testimonials */
 
@@ -709,5 +727,16 @@ padding: 0.5rem 1.5rem;
   .block-domain__prices{
     grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
   }
-  
 }
+
+/* Plans-block */
+
+.block-plans .grid{
+  gap:8rem 4rem;
+}
+
+.block-plans .card{
+  max-width: 500px;
+  margin: 0 auto;;
+}
+
