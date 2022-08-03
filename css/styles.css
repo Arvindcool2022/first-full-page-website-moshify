@@ -198,6 +198,7 @@ padding: 0.5rem 1.5rem;
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -260,10 +261,11 @@ padding: 0.5rem 1.5rem;
   }
  }
 
+
  /* Input Component */
 
  .input{
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   outline: 0;
   padding:1.5rem 3.5rem;
   border: 1px solid var(--color-border);
@@ -287,7 +289,7 @@ padding: 0.5rem 1.5rem;
  .input-group .input{
   border: none;
   flex-grow: 1;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 2rem;
  }
  .input-group .btn{
   margin: 4px;
@@ -683,3 +685,29 @@ padding: 0.5rem 1.5rem;
   }  
 }
 
+/* Block domain */
+
+.block-domain .input-group{
+  box-shadow:0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 698px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+  .block-domain__prices{
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+  }
+  
+}
