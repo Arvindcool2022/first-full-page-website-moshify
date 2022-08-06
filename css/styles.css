@@ -497,7 +497,7 @@ padding: 0.5rem 1.5rem;
 .testimonial__image > .icon-container{
   position: absolute;
   top: 3rem;
-  right: -32px;
+  right: -30px;
 }
 /* media queries (min-width:1024px) from .quote section breaks here */
 
@@ -585,6 +585,7 @@ padding: 0.5rem 1.5rem;
 
 .block__header{
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading{
