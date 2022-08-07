@@ -1,3 +1,6 @@
 logs/
-Moshify
+Moshify/
 components/playground.html
+node_modules/
+.parcel-cache/
+dist/
