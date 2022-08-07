@@ -529,7 +529,7 @@ padding: 0.5rem 1.5rem;
 .callout__heading{
   color: #fff;
   margin-top: 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .callout .btn{
   justify-self: center;
@@ -543,7 +543,7 @@ padding: 0.5rem 1.5rem;
   .callout__content{
     text-align:left;
   }
-  .callout.btn{
+  .callout .btn{
     justify-self: start;
     margin: 0 2rem;
   }
