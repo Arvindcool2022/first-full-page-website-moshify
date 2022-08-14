@@ -1,6 +1,6 @@
 logs/
 Moshify/
-components/playground.html
+playground.html
 node_modules/
 .parcel-cache/
 dist/
